@@ -2,6 +2,8 @@
 var AWS = require('aws-sdk');
 var uuid = require('uuid');
 
+AWS.config.loadFromPath('./config.json');
+
 // Create unique bucket name
 var bucketName = 'node-sdk-sample-' + uuid.v4();
 // Create name for uploaded object key
